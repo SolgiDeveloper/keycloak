@@ -4,21 +4,23 @@
   --baseColor: #31a05f;
   --baseDarkColor: #1e2b36;
   --baseLightColor: #283b48;
-  --secColor: #11f7e2;
+  --secColor: #000;
 }
 
 body {
-  background: var(--baseColor) !important;
-  color: var(--textColor);
+  background: var(--textColor) !important;
+  color: var(--baseColor);
   font-size: 18px;
+  direction: rtl;
 }
 
 /* Login Card */
 
 .login-pf-page .card-pf {
-  border-radius: 20px;
-  background: var(--baseColor);
-  box-shadow: 15px 15px 30px var(--baseDarkColor), -15px -15px 30px var(--baseLightColor);
+  border-radius: 15px;
+  background: var(--textColor);
+  border: 1px solid gray;
+  box-shadow: 15px 15px 30px #c4c4c4, -15px -15px 30px #c4c4c4;
 }
 
 /* Card Title */
@@ -43,12 +45,12 @@ body {
   border: none;
   padding: 22px 30px;
   font-size: 18px;
-  color: var(--textColor);
+  background: var(--textColor);
   height: auto;
 
-  border-radius: 32px;
-  background: var(--baseColor);
-  box-shadow: inset 15px 15px 30px var(--baseDarkColor), inset -15px -15px 30px var(--baseLightColor);
+  border-radius: 10px;
+  color: var(--secColor);
+  border: 1px solid #c4c4c4;
 }
 
 .login-pf-page .form-control::placeholder {
@@ -78,8 +80,8 @@ body {
   width: 60px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: -8px -4px 8px var(--baseLightColor), 8px 4px 12px var(--baseDarkColor),
-    4px 4px 4px var(--baseDarkColor) inset, -4px -4px 4px var(--baseLightColor) inset;
+  border: 1px solid #c4c4c4;
+  margin-left: 10px;
 }
 
 #rememberMe {
@@ -89,15 +91,15 @@ body {
 #kc-form-options .dot {
   height: 100%;
   width: 200%;
-  background: var(--baseColor);
+  background: var(--textOffColor);
   border-radius: 15px;
-  transform: translate3d(-75%, 0, 0);
+  transform: translate3d(+75%, 0, 0);
   transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-  box-shadow: -8px -4px 8px var(--baseLightColor), 8px 4px 12px var(--baseDarkColor);
 }
 
 #rememberMe:checked ~ .dot {
-  transform: translate3d(25%, 0, 0);
+  transform: translate3d(-25%, 0, 0);
+  background: var(--baseColor);
 }
 
 #kc-form-options .label-text {
@@ -110,6 +112,7 @@ body {
   font-size: 16px;
   color: var(--secColor);
   padding-right: 8px;
+  display: none;
 }
 
 #kc-form-buttons {
@@ -119,18 +122,20 @@ body {
 /* Login Button */
 
 #kc-login {
-  border: none;
+  border: 1px solid rgb(35, 160, 87);
   padding: 22px 30px;
   font-size: 18px;
   color: var(--secColor);
 
-  border-radius: 32px;
-  background: linear-gradient(145deg, #253743, #202e39);
-  box-shadow: 15px 15px 30px var(--baseDarkColor), -15px -15px 30px var(--baseLightColor);
+  border-radius: 12px;
+  background: var(--baseColor);
+  box-shadow: 0 0 0 2px rgba(22,  83, 11, 0.4);
 }
-
+#kc-login:hover {
+  background: #31a05f80;
+}
 #kc-login:active:focus {
-  background: linear-gradient(145deg, #202e39, #253743) !important;
+  background: #31a05f90 !important;
   outline: none;
 }
 

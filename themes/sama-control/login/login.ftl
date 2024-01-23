@@ -9,14 +9,14 @@
                 <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
                     <div class="${properties.kcFormGroupClass!}">
                         <#if usernameEditDisabled??>
-                            <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}" type="text" disabled placeholder="<#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if>" />
+                            <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}" type="text" disabled placeholder="<#if !realm.loginWithEmailAllowed>${msg("نام کاربری")}<#elseif !realm.registrationEmailAsUsername>${msg("نام کاربری یا ایمیل")}<#else>${msg("ایمیل")}</#if>" />
                         <#else>
-                            <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autocomplete="off" placeholder="<#if !realm.loginWithEmailAllowed>${msg("username")}<#elseif !realm.registrationEmailAsUsername>${msg("usernameOrEmail")}<#else>${msg("email")}</#if>" />
+                            <input tabindex="1" id="username" class="${properties.kcInputClass!}" name="username" value="${(login.username!'')}"  type="text" autocomplete="off" placeholder="<#if !realm.loginWithEmailAllowed>${msg("نام کاربری")}<#elseif !realm.registrationEmailAsUsername>${msg("نام کاربری یا ایمیل")}<#else>${msg("ایمیل")}</#if>" />
                         </#if>
                     </div>
 
                     <div class="${properties.kcFormGroupClass!}">
-                        <input tabindex="2" id="password" class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off" placeholder="${msg("password")}" />
+                        <input tabindex="2" id="password" class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off" placeholder="${msg("رمز عبور")}" />
                     </div>
 
                     <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
@@ -32,14 +32,14 @@
                                             </#if>
                                             <div class="dot"></div>
                                         </div>
-                                        <div class="label-text">${msg("rememberMe")}</div>
+                                        <div class="label-text">${msg("ذخیره")}</div>
                                     </label>
                                 </div>
                             </#if>
                         </div>
                         <div id="kc-form-reset-psw" class="${properties.kcFormOptionsWrapperClass!}">
                             <#if realm.resetPasswordAllowed>
-                                <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
+                                <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("فراموشی رمز عبور")}</a></span>
                             </#if>
                         </div>
 
@@ -65,7 +65,7 @@
     <#elseif section = "info" >
         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
             <div id="kc-registration">
-                <span>${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a></span>
+                <span>${msg("هنوز حساب کاربری ندارید؟")} <a tabindex="6" href="${url.registrationUrl}">${msg("ثبت نام")}</a></span>
             </div>
         </#if>
     </#if>
