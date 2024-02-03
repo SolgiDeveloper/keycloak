@@ -10,7 +10,7 @@
 body {
   background: var(--textColor) !important;
   color: var(--baseColor);
-  font-size: 18px;
+  font-size: 16px;
   direction: rtl;
 }
 
@@ -43,8 +43,8 @@ body {
 
 .login-pf-page .form-control {
   border: none;
-  padding: 22px 30px;
-  font-size: 18px;
+  padding: 8px 30px;
+  font-size: 16px;
   background: var(--textColor);
   height: auto;
 
@@ -116,17 +116,17 @@ body {
 }
 
 #kc-form-buttons {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 /* Login Button */
 
-#kc-login {
+#kc-login,
+#kc-signup {
   border: 1px solid rgb(35, 160, 87);
   padding: 22px 30px;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--secColor);
-
   border-radius: 12px;
   background: var(--baseColor);
   box-shadow: 0 0 0 2px rgba(22,  83, 11, 0.4);
