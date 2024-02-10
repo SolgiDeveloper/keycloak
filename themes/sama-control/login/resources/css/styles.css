@@ -9,7 +9,7 @@
 
 body {
   background: var(--textColor) !important;
-  color: var(--baseColor);
+  color: var(--secColor);
   font-size: 16px;
   direction: rtl;
 }
@@ -142,4 +142,16 @@ body {
 /*  */
 .kc-logo-text {
   display: none;
+}
+#kc-header-wrapper {
+  padding: 0 !important;
+}
+.login-pf-header {
+  margin-bottom: 0 !important;
+}
+.form-group {
+  margin-bottom: 10px !important;
+}
+.red-star {
+  color: rgb(252, 52, 52) !important;
 }
